@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { closeMenu } from "./utils/appSlice";
 import { useSearchParams } from "react-router-dom";
-import { Most_Like_Video } from "./utils/constant";
 
 const WatchPage = () => {
   const [searchParams] = useSearchParams();
@@ -10,13 +9,7 @@ const WatchPage = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(closeMenu());
-    fetchMostLikeVideo();
   }, []);
-  const fetchMostLikeVideo = async () => {
-    const data = await fetch(Most_Like_Video);
-    const json = await data.json();
-    console.log(json);
-  };
 
   return (
     <div className="">

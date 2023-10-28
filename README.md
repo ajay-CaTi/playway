@@ -5,6 +5,10 @@ git branch -M main
 git remote add origin https://github.com/ajay-CaTi/playway.git
 git push -u origin main
 
+# UX
+
+Debouncing:- difference between 2 key stroke s less than 200ms decline api call.
+
 # Approach
 
 - Head
@@ -49,6 +53,7 @@ return (
 
 const Body = () => {
 return (
+
 <div className="grid grid-flow-col h-full">
 <SideMenu />
 <MainBlock /> // IN BODY THESE TWO BLACKS CHANGE ACCORDING TO ROUTE
