@@ -11,3 +11,5 @@ export const LIVE_CHAT_COUNT = 4;
 
 // Authorization: Bearer [YOUR_ACCESS_TOKEN]
 // Accept: application/json
+
+export const Most_Like_Video = `https://youtube.googleapis.com/youtube/v3/videos?part=snippet%2CcontentDetails%2Cstatistics&myRating=like&key=AIzaSyAXmZNOv6Bz2QCS9HISTjZEqjbKF4Q2DNM`;

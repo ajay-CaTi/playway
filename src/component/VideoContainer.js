@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { YOUTUBE_API } from "./utils/constant";
-import VideoCard from "./VideoCard";
+import VideoCard, { BorderVideoCard } from "./VideoCard";
+import { Link } from "react-router-dom";
 
 const VideoContainer = () => {
   const [videos, setVideos] = useState([]);
@@ -18,8 +19,13 @@ const VideoContainer = () => {
 
   return (
     <div className="flex flex-wrap justify-around">
-      {videos.map((video) => {
-        return <VideoCard info={video} />;
+      {videos[0] && <BorderVideoCard info={videos[0]} />}
+      {videos.map((video, index) => {
+        return (
+          <Link key={index} to={"/watch?v=" + video.id}>
+            <VideoCard info={video} />
+          </Link>
+        );
       })}
     </div>
   );
